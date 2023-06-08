@@ -1,0 +1,47 @@
+API Documentation: Event API
+
+Base URL: http://localhost:8000
+
+1. Create Event
+
+Endpoint: /api/v1/events
+Method: POST
+Description: Create a new Event for an event.
+Payload:
+event_id (integer): The unique identifier of the event.
+title (string): The title of the Event.
+image (file): The image file for the Event cover.
+time (string): The time at which the Event should be sent.
+description (string): The description of the Event.
+Response: Returns the created Event object with its unique identifier.
+
+
+2. Get Event
+
+Endpoint: /api/v1/events/:id
+Method: GET
+Description: Get details of a specific Event.
+Parameters:
+id (integer): The unique identifier of the Event.
+Response: Returns the Event object with the specified identifier.
+
+
+3. Update Event
+
+Endpoint: /api/v1/events/:id
+Method: PUT
+Description: Update an existing Event.
+Parameters:
+id (integer): The unique identifier of the Event.
+Payload: Same as the payload for creating a Event.
+Response: Returns the updated Event object with its unique identifier.
+
+
+4. Delete Event
+
+Endpoint: /api/v1/events/:id
+Method: DELETE
+Description: Delete a specific Event.
+Parameters:
+id (integer): The unique identifier of the Event.
+Response: Returns a success message indicating the deletion of the Event.
